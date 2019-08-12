@@ -11,20 +11,18 @@ The software is currently in his infancy, it delivers basic manipulation but sti
 
 ## Dependency 
 
-- **FLTK** : An open source GUI library working on all platform. 
-         Can be compiled has a static library, reducing the number of DLL for windows platforms.
-
-- **OpenGL**: The 3D base software.
-
-- **CURL**: Software to interact with web servers.
-
-- **GLEW**: OpenGL loaders added to the software to add compatibility with Window OS.
-        Sadly, I was not hable to compile on Windows Platform... (I NEED HELP HERE)
+| LIB | Version | Description|
+|-----|---------|------------|
+| FLTK | 1.3.4 | An open source GUI library working on all platform. Can be compiled has a static library, reducing the number of DLL for windows platforms. |
+| OpenGL | 19.0.8 | The 3D base software.|
+| CURL | 7.58.0 | Software to interact with web servers.|
+| GLU  | 9.0.0 | Extension for OpenGL |
+| GLEW | 2.0 | OpenGL loaders added to the software to add compatibility with Window OS. Sadly, I was not hable to compile on Windows Platform... (I NEED HELP HERE)|
 
 ## Installation
 Install the dependency for your OS, then the easy way is to use CMAKE.
 For Debian based system its look like this:
-`sudo apt install build-essential libcurl4-openssl-dev libglew-dev libfltk1.3-dev;`
+`sudo apt install build-essential libcurl4-openssl-dev libglew-dev libfltk1.3-dev libglu1-mesa-dev;`
 
 Then use cmake:
 `cmake ./FullEarthDir; make;`
