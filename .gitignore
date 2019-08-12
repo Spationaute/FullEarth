@@ -26,3 +26,10 @@
 *.exe
 *.out
 *.app
+
+\.idea/
+cmake-build-debug-mingw/
+cmake-build-debug/
+cmake-build-release/
+res/dutch\.png
+res/big\.png
