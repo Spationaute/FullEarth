@@ -23,10 +23,18 @@ The software is currently in his infancy, it delivers basic manipulation but sti
 
 ## Installation
 Install the dependency for your OS, then the easy way is to use CMAKE.
-There is no install script for now. The binary will be produced in the root directory.
+For Debian based system its look like this:
+`sudo apt install build-essential libcurl4-openssl-dev libglew-dev libfltk1.3-dev;`
 
-`cmake ./FullEarthDir; make;`  
+Then use cmake:
+`cmake ./FullEarthDir; make;`
+
+There is no install script for now. The binary will be produced in the root directory.
 
 ## Precompiled Version
 
-Watch closely, a precompiled version for Linux x86_64 will be added here.
+Precompiled Versions:
+
+|Platforme|Processor|Link|
+|---------|---------|----|
+| Linux   | x86_64  | <a href="https://cdn.eintel.net/Softwares/FullEarth-0.1.1-Linux.tar.gz"> FullEarth-0.1.1-Linux.tar.gz</a>

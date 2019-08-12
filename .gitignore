@@ -33,3 +33,5 @@ cmake-build-debug/
 cmake-build-release/
 res/dutch\.png
 res/big\.png
+/cmake-build-package/
+/cmake-build-release/
