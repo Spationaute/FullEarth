@@ -13,10 +13,10 @@ The software is currently in his infancy, it delivers basic manipulation but sti
 
 | LIB | Version | Description|
 |-----|---------|------------|
-| FLTK | 1.3.4 | An open source GUI library working on all platform. Can be compiled has a static library, reducing the number of DLL for windows platforms. |
+| FLTK  <br/> FLTK-Image <br/> FLTK-GL| 1.3.4 | An open source GUI library working on all platform. Can be compiled has a static library, reducing the number of DLL for windows platforms. |
 | OpenGL | 19.0.8 | The 3D base software.|
 | CURL | 7.58.0 | Software to interact with web servers.|
-| OpenSSL | 1.0.2-nss| Encryption Software. Used by Curl to communicate with USGS servers using HTTPS protocol. 
+| OpenSSL | 1.0.2-nss| Encryption Software. Used by Curl Fto communicate with USGS servers using HTTPS protocol. 
 | GLU  | 9.0.0 | Extension for OpenGL |
 | GLEW | 2.0 | OpenGL loaders added to the software to add compatibility with Window OS. Sadly, I was not hable to compile on Windows Platform... (I NEED HELP HERE)|
 
@@ -36,4 +36,4 @@ Precompiled Versions:
 
 |Platforme|Processor|Link|
 |---------|---------|----|
-| Linux   | x86_64  | <a href="https://cdn.eintel.net/Softwares/FullEarth-0.1.1-Linux.tar.gz"> FullEarth-0.1.1-Linux.tar.gz</a>
+| Linux   | x86_64  | <a href="https://cdn.eintel.net/Softwares/FullEarth-0.1.2-Linux.tar.gz"> FullEarth-0.1.1-Linux.tar.gz</a><br/><a href="https://cdn.eintel.net/Softwares/FullEarth-0.1.2-Linux.tar.gz"> FullEarth-0.1.2-Linux.deb</a>

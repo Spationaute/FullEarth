@@ -12,13 +12,13 @@ Name=FullEarth
 Comment= EarthQuake Rendered on a 3D globe
 
 # The path to the folder in which the executable is run
-Path=/home/gabriel/Documents/Prog/FullEarth-Dist/FullEarth-Linux
+Path=/opt/stellaire/FullEarth/
 
 # The executable of the application, possibly with arguments.
-Exec=/home/gabriel/Documents/Prog/FullEarth-Dist/FullEarth-Linux/FullEarth
+Exec=/opt/stellaire/FullEarth/FullEarth
 
 # The name of the icon that will be used to display this entry
-Icon=/home/gabriel/Documents/Prog/FullEarth-Dist/FullEarth-Linux/res/fullearthicon.svg
+Icon=/opt/stellaire/FullEarth/res/fullearthicon.svg
 # Describes whether this application needs to be run in a terminal or not
 Terminal=false
 
