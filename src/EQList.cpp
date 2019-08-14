@@ -41,17 +41,18 @@ void EQList::draw() {
             fl_draw(ii->label.c_str(), px + 10, py + n * delta + delta - (delta / 2 + fl_descent()));
             fl_color(FL_DARK1);
             char timeToPrint[255];
-            memset(timeToPrint, 0x00, sizeof(timeToPrint));
+            memset(timeToPrint, 0x00, 256*sizeof(char));
             tm *event_time = gmtime(&(ii->event_time));
-            snprintf(timeToPrint, 254 * sizeof(char), "(#%i)- %.2f km - %02i:%02i:%02i GMT - %02i/%02i/%i",
+#ifndef __MINGW32__
+            snprintf(timeToPrint, 254 * sizeof(char), "(#%li)- %.2f km - %02i:%02i:%02i GMT - %02i/%02i",
                      n + 1,
                      ii->depth,
                      event_time->tm_hour,
                      event_time->tm_min,
                      event_time->tm_sec,
                      event_time->tm_mday,
-                     event_time->tm_mon,
-                     event_time->tm_year + 1900);
+                     event_time->tm_mon);
+#endif
             fl_draw(timeToPrint, 10 + px, py + n * delta + delta - fl_descent());
             n++;
         }

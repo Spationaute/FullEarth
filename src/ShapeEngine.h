@@ -5,9 +5,7 @@
 #ifndef FULLEARTH_SHAPEENGINE_H
 #define FULLEARTH_SHAPEENGINE_H
 
-#ifdef __MINGW32__
-#define GLEW_STATIC 1
-#endif
+
 #define GL_GLEXT_PROTOTYPES
 #include <GL/glew.h>
 #include <GL/glu.h>
