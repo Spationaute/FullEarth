@@ -10,7 +10,6 @@ using json = nlohmann::json;
 FullEarth::FullEarth(int x, int y, int w, int h, Parametres* param, const char* label):
 Fl_Gl_Window(x,y,w,h,label)
 {
-    param->showFlags = SHOW_ALL;
     coastBuffer =0;
     faultsBuffer=0;
     riversBuffer=0;
