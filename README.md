@@ -36,4 +36,4 @@ Precompiled Versions:
 
 |Platforme|Processor|Link|
 |---------|---------|----|
-| Linux   | x86_64  | <a href="https://cdn.eintel.net/Softwares/FullEarth-0.1.3-Linux.tar.gz"> FullEarth-0.1.3-Linux.tar.gz</a><br/><a href="https://cdn.eintel.net/Softwares/FullEarth-0.1.3-Linux.tar.gz"> FullEarth-0.1.3-Linux.deb</a>
+| Linux   | x86_64  | <a href="https://cdn.eintel.net/Softwares/FullEarth-0.1.4-Linux.tar.gz"> FullEarth-0.1.4-Linux.tar.gz</a><br/><a href="https://cdn.eintel.net/Softwares/FullEarth-0.1.4-Linux.tar.gz"> FullEarth-0.1.4-Linux.deb</a>

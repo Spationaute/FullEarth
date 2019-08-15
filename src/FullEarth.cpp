@@ -72,17 +72,9 @@ void FullEarth::draw() {
             glBlendEquationSeparate(GL_FUNC_ADD, GL_FUNC_ADD);
             glBlendFuncSeparate(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA, GL_ONE, GL_ZERO);
 
-            if(param->showFlags & SHOW_RIVERS) {
-                genLinesBuffer(riversBuffer, rivers);
-            }
-
-            if(param->showFlags & SHOW_COAST) {
-                genLinesBuffer(coastBuffer, coast);
-            }
-
-            if(param->showFlags & SHOW_FAULTS) {
-                genLinesBuffer(faultsBuffer, faults);
-            }
+            genLinesBuffer(riversBuffer, rivers);
+            genLinesBuffer(coastBuffer, coast);
+            genLinesBuffer(faultsBuffer, faults);
             sengine.initShapes();
 
             std::cout << "Context Ok!" << std::endl;
