@@ -4,25 +4,22 @@ set(CMAKE_CXX_STANDARD 14)
 set(OpenGL_GL_PREFERENCE GLVND)
 
 
-include(InstallRequiredSystemLibraries)
-
-
-SET(CPACK_PACKAGE_DESCRIPTION_SUMMARY "FullEarth")
-SET(CPACK_PACKAGE_VENDOR "stellaire")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "FullEarth")
+set(CPACK_PACKAGE_VENDOR "stellaire")
 set(CPACK_INSTALL_CMAKE_PROJECTS "${CMAKE_CURRENT_BINARY_DIR};FullEarth;ALL;/")
-SET(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
+set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
 set(CPACK_PACKAGING_INSTALL_PREFIX "/opt/stellaire")
 set(CPACK_PACKAGING_ICON "/res/fullearthicon.svg")
-SET(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE.md")
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE.md")
 set(CPACK_DEBIAN_PACKAGE_DEPENDS "libfltk1.3 (>=1.3.4), libfltk-images1.3 (>=1.3.4), libfltk-gl1.3 (>=1.3.4),  libcurl4 (>=7.58.0), libglew2.0 (>=2.0.0)")
 SET(CPACK_PACKAGE_VERSION_MAJOR "0")
 SET(CPACK_PACKAGE_VERSION_MINOR "1")
-SET(CPACK_PACKAGE_VERSION_PATCH "4")
+SET(CPACK_PACKAGE_VERSION_PATCH "5")
 SET(CPACK_PACKAGE_EXECUTABLES "FullEarth" "FullEarth")
 set(CPACK_PACKAGE_CONTACT "Spationaute")
 set(CPACK_INSTALLED_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/res")
 include(CPack)
-set(CPACK_GENERATOR "DEB")
+
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
  #   message(STATUS "Preparing for Windows Platfom")
     set(CMAKE_FIND_ROOT_PATH "C:/msys64")
@@ -39,10 +36,8 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")
 else()
     find_package(FLTK REQUIRED)
     find_package(CURL REQUIRED)
-    set(GLEW_USE_STATIC_BUILDS 1)
-    set(CMAKE_CXX_FLAGS "-DGLEW_STATIC")
     find_package(GLEW REQUIRED)
-   # find_package(OpenGL REQUIRED)
+    find_package(OpenGL REQUIRED)
 endif()
 
 set(SOURCES src/main.cpp src/FullEarth.cpp src/FullEarth.h src/Geojson.cpp src/Geojson.h
@@ -51,6 +46,10 @@ set(SOURCES src/main.cpp src/FullEarth.cpp src/FullEarth.h src/Geojson.cpp src/G
 
 set(CMAKE_CXX_FLAGS_RELEASE -O3)
 set(CMAKE_C_FLAGS_RELEASE -O3)
+
+set(CMAKE_CXX_FLAGS_PACKAGE ${CMAKE_CXX_FLAGS_RELEASE})
+set(CMAKE_C_FLAGS_PACKAGE ${CMAKE_C_FLAGS_RELEASE})
+
 add_executable(FullEarth ${SOURCES})
 
 if(${CMAKE_SYSTEM_NAME} STREQUAL "Windows")

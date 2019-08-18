@@ -56,7 +56,7 @@ bool Parametres::load(const char *dest) {
     if(ncpy>0) {
         memcpy(backgroundFile, inString, sizeof(inString));
     }
-    printf("\tDelta T: %i\n",minDeltaTime);
+    printf("\tDelta T: %li\n",minDeltaTime);
     printf("\tFlag: %X\n",showFlags);
     printf("\tWorld Map File: %s  \n", worldMapFile);
     printf("\tBackground File: %s \n", backgroundFile);

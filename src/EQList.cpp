@@ -41,10 +41,10 @@ void EQList::draw() {
             fl_draw(ii->label.c_str(), px + 10, py + n * delta + delta - (delta / 2 + fl_descent()));
             fl_color(FL_DARK1);
             char timeToPrint[255];
-            memset(timeToPrint, 0x00, 256*sizeof(char));
+            memset(timeToPrint, 0x00, 255*sizeof(char));
             tm *event_time = gmtime(&(ii->event_time));
 #ifndef __MINGW32__
-            snprintf(timeToPrint, 254 * sizeof(char), "(#%li)- %.2f km - %02i:%02i:%02i GMT - %02i/%02i",
+      snprintf(timeToPrint, 254 * sizeof(char), "(#%i)- %.2f km - %02i:%02i:%02i GMT - %02i/%02i",
                      n + 1,
                      ii->depth,
                      event_time->tm_hour,
