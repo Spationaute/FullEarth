@@ -3,11 +3,11 @@ FullEarth is an OpenGL 3D globe representation of earthquakes around the world.
 It uses GEOJSON has sources and is compatible with USGS notification service.
 The software is currently in his infancy, it delivers basic manipulation but still miss a large number of features.
 ## Few images 
-<img src="https://cdn.eintel.net/Images/Software/fe-one.png"></img>
+<img src="https://cdn.eintel.net/Images/Fullearth-01.png"></img>
 
-<img src="https://cdn.eintel.net/Images/Software/fe-two.png"></img>
+<img src="https://cdn.eintel.net/Images/Fullearth-02.png"></img>
 
-<img src="https://cdn.eintel.net/Images/Software/fe-dutch.png"></img>
+<img src="https://cdn.eintel.net/Images/Fullearth-03.png"></img>
 
 ## Dependency 
 
