@@ -26,7 +26,7 @@ For Debian based system its look like this:
 `sudo apt install build-essential libcurl4-openssl-dev libglew-dev libfltk1.3-dev libglu1-mesa-dev;`
 
 Then use cmake:
-`cmake ./FullEarthDir; make;`
+`cd FullEarhDir;mkdir build;cd build;cmake ../; make;`
 
 There is no install script for now. The binary will be produced in the root directory.
 
