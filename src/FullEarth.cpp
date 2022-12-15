@@ -34,7 +34,7 @@ Fl_Gl_Window(x,y,w,h,label)
     rivers->parse();
     faults->parse();
     volcano->parse();
-
+    XInitThreads();
     Fl::add_timeout(0.02, FullEarth::autoTurn, this);
     Fl::add_timeout(0.025, FullEarth::updateGraphic, this);
     Fl::add_timeout(300, FullEarth::updateData, this);

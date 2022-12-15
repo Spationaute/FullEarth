@@ -8,6 +8,10 @@
 #include <fstream>
 
 #define GL_GLEXT_PROTOTYPES
+#ifdef __linux
+#include <X11/Xlib.h>
+#endif
+
 #include <GL/glew.h>
 #include <GL/glu.h>
 #include <FL/gl.h>
