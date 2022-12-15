@@ -278,8 +278,10 @@ void FullEarth::resize(int x, int y, int w, int h) {
 }
 
 void FullEarth::autoTurn(void *data) {
+    Fl::lock();
     FullEarth* fe = (FullEarth*) data;
     fe->turn();
+    Fl::unlock();
     Fl::repeat_timeout(0.01, FullEarth::autoTurn, (void*)fe);
 }
 
@@ -433,16 +435,21 @@ void FullEarth::updateStatus(STATUS statVal) {
 
 void FullEarth::updateData(void* data) {
     auto target = (FullEarth*) data;
+    Fl::lock();
     target->updateStatus(ST_UPDATE);
+    Fl::unlock();
+
     EQjson* eq = target->getEqJson();
     bool gatres = eq->gatter(target->sourceUrl.c_str());
     bool parres = eq->parse();
+    Fl::lock();
     if(! (gatres&&parres)){
         target->updateStatus(ST_UPDATE_ERROR);
     }else {
         target->updateStatus(ST_READY);
     }
     target->parent()->redraw();
+    Fl::unlock();
     Fl::remove_timeout(FullEarth::updateData,target);
     Fl::add_timeout(300,FullEarth::updateData,target);
 }
@@ -463,9 +470,11 @@ void FullEarth::lookAt(EarthQuake* target) {
 }
 
 void FullEarth::updateGraphic(void *data) {
+    Fl::lock();
     FullEarth* fe = (FullEarth*) data;
     fe->redraw();
     fe->nextStep();
+    Fl::unlock();
     Fl::repeat_timeout(0.025, FullEarth::updateGraphic, (void*)fe);
 }
 
