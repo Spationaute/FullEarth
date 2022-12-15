@@ -60,12 +60,12 @@ endif()
 
 target_link_libraries(FullEarth ${FLTK_LIBRARY})
 target_link_libraries(FullEarth ${OPENGL_LIBRARY})
-target_link_libraries(FullEarth ${GLEW_LIBRARY})
+target_link_libraries(FullEarth ${GLEW_LIBRARIES})
 target_link_libraries(FullEarth ${CURL_LIBRARY})
 
 
 target_include_directories(FullEarth PUBLIC ${OPENGL_INCLUDE_DIR})
-target_include_directories(FullEarth PUBLIC ${GLEW_INCLUDE_DIR})
+target_include_directories(FullEarth PUBLIC ${GLEW_INCLUDE_DIRS})
 target_include_directories(FullEarth PUBLIC ${CURL_INCLUDE_DIR})
 target_include_directories(FullEarth PUBLIC ${FLTK_INCLUDE_DIR})
 

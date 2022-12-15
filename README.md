@@ -26,9 +26,9 @@ For Debian based system its look like this:
 `sudo apt install build-essential libcurl4-openssl-dev libglew-dev libfltk1.3-dev libglu1-mesa-dev;`
 
 Then use cmake:
-`cd FullEarhDir;mkdir build;cd build;cmake ../; make;`
+`cd FullEarhDir;mkdir build;cd build;cmake ../; make;mv Fullearth ..;`
 
-There is no install script for now. The binary will be produced in the root directory.
+There is no install or starting script for now, Fullearth need to be executed in it's directory.
 
 ## Precompiled Version
 
