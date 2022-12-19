@@ -63,6 +63,18 @@ void FullEarth::draw() {
             if (!can_do()) {
                 std::cout << "Missing OpenGL suppots. Please Update your driver!" << std::endl;
             }
+	    std::cout << "Init glew." << std::endl;
+            glewExperimental = GL_TRUE;
+
+            if(glewInit()){
+                std::cout << "Error loading GLEW" << std::endl;
+            } // defines pters to functions of OpenGL V 1.2 and above
+            sengine.setWMandBG(param->getWorldMapFile(),
+                           param->getBackgroundFile());
+    
+            #ifndef MESA
+                glDrawBuffer(GL_FRONT_AND_BACK);
+            #endif // !MESA
             glViewport(0, 0, pixel_w(), pixel_h());
 
             glEnable(GL_TEXTURE_2D);
@@ -160,21 +172,15 @@ void FullEarth::draw() {
     glPopMatrix();
         gluDeleteQuadric(quad);
         glFlush();
+    #ifndef MESA
+        glDrawBuffer(GL_BACK);
+    #endif // !MESA
 }
 int FullEarth::handle(int event) {
     static int first = 1;
     if (first && event == FL_SHOW && shown()) {
         first = 0;
-        make_current();
-        std::cout << "Init glew." << std::endl;
-        glewExperimental = GL_TRUE;
-
-        if(glewInit()){
-            std::cout << "Error loading GLEW" << std::endl;
-        } // defines pters to functions of OpenGL V 1.2 and above
-        sengine.setWMandBG(param->getWorldMapFile(),
-                           param->getBackgroundFile());
-    }
+        }
     if(event == FL_UNFOCUS || event == FL_FOCUS ){
         return 1;
     }
